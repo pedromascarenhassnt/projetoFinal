@@ -39,7 +39,7 @@ nav {
 
 /* 1. Ajuste na LI ativa: ela vira apenas a referência */
 li.active {
-    color: white !important; /* Força o texto do link ativo a ser branco */
+    color: rgb(255, 255, 255) !important; /* Força o texto do link ativo a ser branco */
     text-align: center; /* Alinha o texto no centro do elemento */
     position: relative; /* Mantém como relativo para ancorar o balão azul atrás */
     padding: 6px 30px; /* Mantém o mesmo espaço para o texto respirar */
@@ -105,9 +105,12 @@ img#banner{
 
 .imgsbloco{
     width: 100%; /* Faz a imagem do produto ocupar todo o espaço do bloco pai */
-    max-width: 200px; /* Limita a largura máxima da imagem do produto em 200px */
+    max-width: 245px; /* Limita a largura máxima da imagem do produto em 200px */
     height: auto; /* Mantém a proporção da altura correta sem amassar o produto */
     transition: 0.3s; /* Cria uma transição suave de 0.3 segundos para qualquer efeito */
+    margin-right: 50px; /* Centraliza a imagem dentro do bloco pai */
+    
+    
 }
 
 .imgsbloco:hover{

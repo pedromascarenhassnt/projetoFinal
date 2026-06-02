@@ -39,7 +39,7 @@ nav {
 
 /* 1. Ajuste na LI ativa: ela vira apenas a referência */
 li.active {
-    color: white !important; /* Força o texto do link ativo a ser branco */
+    color: rgb(0, 0, 0) !important; /* Força o texto do link ativo a ser branco */
     text-align: center; /* Alinha o texto no centro do elemento */
     position: relative; /* Mantém como relativo para ancorar o balão azul atrás */
     padding: 6px 30px; /* Mantém o mesmo espaço para o texto respirar */
@@ -71,7 +71,7 @@ li.active::before {
     right: 171px; /* Alinha o carrinho a 159px da borda direita */
 }
 #atual{
-    color: rgb(255, 255, 255); /* Altera a cor do elemento com id "atual" para branco */
+    color: rgb(255, 255, 255); /* Altera a cor do elemento com id "atual" para preto */
 }
 
 .links{
@@ -119,9 +119,10 @@ img#banner{
     margin-left: 50px; /* Adiciona uma margem de 50px na lateral esquerda da galeria */
 }
 
+
 #galeria-bloco{
     background: #ffffff; /* CORRIGIDO: Alterado de gradiente redundante idêntico para uma cor sólida pura */
-    padding: 50px; /* Adiciona 50px de espaço interno ao redor de toda a galeria */
+    padding: 40px; /* Adiciona 50px de espaço interno ao redor de toda a galeria */
     display: flex; /* Ativa o Flexbox para alinhar o conteúdo interno */
     justify-content: center; /* Centraliza horizontalmente o conteúdo da galeria */
 }
