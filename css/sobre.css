@@ -1,0 +1,90 @@
+/* Topo (Top), Direita (Right), Baixo (Bottom) e Esquerda (Left) */
+
+*{
+    margin: 0; /* Remove a margem padrão externa de todos os elementos */
+    padding: 0; /* Remove o espaçamento padrão interno de todos os elementos */
+    box-sizing: border-box; /* Garante que a largura e altura incluam bordas e paddings */
+}
+
+body{
+    font-family: 'Poppins', sans-serif; /* Define a fonte padrão "Poppins" para o site */
+}
+
+nav {
+    display: flex; /* Ativa o modelo Flexbox para alinhar os elementos filhos */
+    justify-content: center; /* Alinha horizontalmente os itens filhos no centro do nav */
+    align-items: center; /* Alinha verticalmente os itens filhos no centro do nav */
+    padding: 15px; /* Adiciona 15px de espaço interno em cima/baixo e 50px nas laterais */
+    position: relative; /* Define este elemento como a referência para filhos absolutos */
+}
+
+/* nav:active{
+    background-color: rgb(40, 40, 209);
+    color: white;
+    font-weight: bold;
+
+} */
+
+.nav-list {
+    display: flex; /* Ativa o Flexbox para organizar os links em linha */
+    justify-content: center; /* Alinha os links de forma centralizada dentro da lista */
+    align-items: center; /* Alinha verticalmente os links no centro da barra */
+    list-style-type: none; /* Remove as bolinhas/marcadores padrão da lista HTML */
+    border: 2px solid #0172d0; /* Cria uma borda fina azul ao redor do menu (formato pílula) */
+    border-radius: 50px; /* Arredonda as pontas da borda para criar o design de pílula */
+    padding: 5px 55px; /* Adiciona 5px de espaço interno acima/abaixo e 55px nas laterais */
+    gap: clamp(1rem, 3vw, 4rem); /* Cria espaço dinâmico entre os links usando limites flexíveis */
+    background: transparent; /* Mantém o fundo da lista transparente, sem cor sólida */
+}
+
+/* 1. Ajuste na LI ativa: ela vira apenas a referência */
+li.active {
+    color: rgb(255, 255, 255) !important; /* Força o texto do link ativo a ser branco */
+    text-align: center; /* Alinha o texto no centro do elemento */
+    position: relative; /* Mantém como relativo para ancorar o balão azul atrás */
+    padding: 6px 30px; /* Mantém o mesmo espaço para o texto respirar */
+    display: inline-flex; /* Garante alinhamento correto do texto */
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Garante que o texto fique ACIMA do balão azul */
+}
+
+
+li.active::before {
+    content: ""; /* Necessário para criar o elemento fantasma */
+    position: absolute; /* Torna o balão invisível para o cálculo de espaço da barra */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa exatamente a largura da li */
+    height: 100%; /* Ocupa exatamente a altura da li */
+    background-color: #0172d0; /* A cor de fundo azul */
+    border-radius: 50px; /* Deixa as pontas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* A sombra suave abaixo do botão */
+    z-index: -1; /* Joga o balão azul para TRÁS do texto */
+}
+
+
+
+.carrinho {
+    width: 25px; /* Define a largura fixa que você queria, substituindo o clamp e o size */
+    height: auto; /* Ajusta a altura proporcionalmente para não distorcer a imagem */
+    cursor: pointer; /* Transforma o cursor do mouse na "mãozinha" de clique */
+    position: absolute; /* Remove o carrinho do fluxo normal, permitindo posicionamento livre */
+    right: 171px; /* Alinha o carrinho a 159px da borda direita */
+}
+#atual{
+    color: rgb(255, 255, 255); /* Altera a cor do elemento com id "atual" para branco */
+}
+
+.links{
+    text-decoration: none; /* Remove o sublinhado padrão que os links têm em HTML */
+    color: black; /* Define a cor do texto do link como preta */
+}
+
+#pear {
+    position: absolute; /* Remove a logo do fluxo, fazendo-a "flutuar" na tela */
+    left: 50px; /* Alinha a lateral esquerda da logo a 50px da borda do nav */
+    top: 50%; /* Joga a logo para a metade vertical do elemento pai */
+    transform: translateY(-50%); /* Ajusta o eixo próprio da logo para um alinhamento vertical perfeito */
+    width: 8%; /* Define a largura da logo como 8% do tamanho da tela */
+}

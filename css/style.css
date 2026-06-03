@@ -213,3 +213,22 @@ footer{
     flex: 1; /* Faz com que cada coluna do rodapé tenha exatamente a mesma largura distribuída */
     padding: 0px 20px; /* Adiciona 20px de espaçamento interno apenas nas laterais das colunas */
 }
+
+
+/* ABA SOBRE */
+
+#container{
+    display: flex;
+    align-items: start;
+    padding: 105px;
+    gap: 100px;
+}
+
+#foto-sobre{
+    width: 30%;
+    height: auto;
+}
+
+
+/* ABA CONTATO */
+
