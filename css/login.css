@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+/* =========================
+   VARIÁVEIS GLOBAIS
+========================= */
+:root {
+    --cor-blue: #0172d0;
+    --cor-lightblue: #5EACFF;
+    --cor-black: #1f1f1f;
+    --cor-white: #fafafa;
+    --cor-lightgray: #ACACAC;
+    
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   RESET CSS
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+   
+   
+    /* outline: 1px solid red; */
+}
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+body {
+    font-family: var(--fonte-padrao);
+}
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+main {
+    background: linear-gradient(to bottom, #5EACFF 0%, #386799 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   CARD DE LOGIN
+========================= */
+#container {
+    width: 50vw;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    border-radius: 23px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* =========================
+   ÁREA DE LOGIN
+========================= */
+#login {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* =========================
+   LOGO / IMAGENS
+========================= */
+img {
+    
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+  
+
+
+}
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35%;
+
+  
+}
+#entrar{
+    width: 100%;
+    height: 65%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* =========================
+   TÍTULO DE ENTRADA
+========================= */
+#tituloEntrar {
+    margin-bottom: 30px;
+
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: var(--cor-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================
+   EFEITO HOVER DOS LINKS
+========================= */
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   ÁREA DE CADASTRO
+========================= */
+#cadastre-se {
+    width: 25vw;
+    background-color: var(--cor-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 20px;
+}
+
+/* =========================
+   TEXTO INFORMATIVO
+========================= */
+#paragrafos {
+    margin: 30px 10px;
+}
+
+/* =========================
+   CAMPOS DE ENTRADA
+========================= */
+input {
+    border: 1px solid var(--cor-black);
+    margin-bottom: 20px;
+    width: 77%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 11px;
+    transition: transform 0.3s ease, box-shawdow 0.3s ease;
+}
+input:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 10px 20px #a0c9eb;
+}
+
+/* =========================
+   FOCO DOS INPUTS
+========================= */
+/* input:focus {
+    outline: none;
+    border-color: var(--cor-blue);
+    box-shadow: 0 0 8px rgba(1, 114, 208, .3);
+} */
+
+/* =========================
+   BOTÃO ENTRAR
+========================= */
+.btn-entrar {
+    background-color: var(--cor-blue);
+    color: var(--cor-white);
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 8px;
+    width: 40%;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shawdow 0.3s ease;
+}
+
+/* =========================
+   HOVER BOTÃO ENTRAR
+========================= */
+.btn-entrar:hover {
+    background-color: #1987e0;
+     transform: translateY(-5px);
+    box-shadow: 0 10px 20px #a0c9eb;
+}
+
+/* =========================
+   BOTÃO REGISTRAR
+========================= */
+.btn-registrar {
+    background-color: var(--cor-blue);
+    color: var(--cor-white);
+    border: 1px solid var(--cor-white);
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 8px;
+    width: 40%;
+    cursor: pointer;
+}
+
+/* =========================
+   HOVER BOTÃO REGISTRAR
+========================= */
+.btn-registrar:hover {
+    background-color: #0f7fdc;
+}

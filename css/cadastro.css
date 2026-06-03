@@ -1,0 +1,302 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* =========================
+   VARIÁVEIS GLOBAIS
+========================= */
+:root {
+    --cor-blue: #0172d0;
+    --cor-lightblue: #5EACFF;
+    --cor-black: #1f1f1f;
+    --cor-white: #fafafa;
+    --cor-lightgray: #ACACAC;
+
+    --fonte-padrao: Poppins, Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   RESET CSS
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+body {
+    font-family: var(--fonte-padrao);
+}
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+main {
+    background: linear-gradient(to bottom, #5EACFF 0%, #386799 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* =========================
+   CONTAINER QUE ABRIGA
+   BRANDING E FORMULÁRIO
+========================= */
+#container {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 23px;
+}
+#container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #14324b;
+}
+
+/* =========================
+   ÁREA DE BRANDING
+========================= */
+#branding {
+    background-color: var(--cor-blue);
+    width: 60vw;
+    height: 80vh;
+    color: var(--cor-white);
+    padding: 10px;
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   ÁREA DE TEXTO
+========================= */
+#texto {
+    width: 100%;
+    height: 45%;
+    padding: 35px;
+}
+
+/* =========================
+   ÁREA DA IMAGEM
+========================= */
+#imagem {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   TÍTULO PRINCIPAL
+========================= */
+#branding h1 {}
+
+/* =========================
+   PARÁGRAFOS INFORMATIVOS
+========================= */
+.paragrafos {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* =========================
+   SUBTÍTULO DA ÁREA
+   DE BRANDING
+========================= */
+#branding h2 {
+    font-weight: lighter;
+    margin-top: 40px;
+}
+
+/* =========================
+   IMAGEM PRINCIPAL
+========================= */
+#image-pear {
+    height: 34vh;
+    width: auto;
+    display: block;
+}
+
+/* =========================
+   ÁREA DO FORMULÁRIO
+========================= */
+#formulario {
+    background-color: var(--cor-white);
+    width: 40vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: -20px;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+}
+
+/* =========================
+   CABEÇALHO DO FORMULÁRIO
+========================= */
+#text-forms {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: var(--cor-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================
+   EFEITO HOVER DOS LINKS
+========================= */
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   TÍTULOS H2 GERAIS
+========================= */
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   CONTAINER DOS CAMPOS
+========================= */
+#forms {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* =========================
+   TÍTULO DO FORMULÁRIO
+========================= */
+#formulario h1 {
+    font-weight: lighter;
+    font-family: arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   SUBTÍTULO DO FORMULÁRIO
+========================= */
+#formulario h2 {
+    font-weight: lighter;
+    margin: 20px 0;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+form {
+    background-color: var(--cor-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 450px;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 50px 30px;
+    
+    
+}
+
+/* =========================
+   CAMPOS DE ENTRADA
+========================= */
+input {
+    margin-bottom: 20px;
+    padding: 14px;
+    border-radius: 11px;
+    min-width: 100%;
+    font-size: 16px;
+    border: 2px solid transparent;
+     font-family: var(--fonte-padrao);
+     transition: transform 0.3s ease, box-shawdow 0.3s ease;
+}
+
+/* =========================
+   FOCO DOS INPUTS
+========================= */
+ /* input:focus {
+    outline: none;
+    border-color: var(--cor-blue);
+    box-shadow: 0 0 8px rgba(1, 114, 208, .3);
+     transform: translateY(-10px);
+    box-shadow: 0 10px 20px #14324b; 
+}  */
+input:hover{
+      transform: translateY(-5px);
+    box-shadow: 0 10px 20px #14324b;
+
+}
+
+/* =========================
+   BOTÃO DE ENVIO
+========================= */
+button {
+    margin-top: 60px;
+    padding: 7px;
+    min-width: 35%;
+    border-radius: 20px;
+    background-color: var(--cor-lightblue);
+    font-size: 18px;
+    cursor: pointer;
+     font-family: var(--fonte-padrao);
+     transition: transform 0.3s ease, box-shawdow 0.3s ease;
+}
+
+/* =========================
+   EFEITO HOVER DO BOTÃO
+========================= */
+button:hover {
+    background-color: #8abdf3;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #14324b;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    #container {
+        flex-direction: column;
+        width: 95vw;
+        height: auto;
+    }
+
+    #branding,
+    #formulario {
+        width: 100%;
+        height: auto;
+        border-radius: 23px;
+    }
+}

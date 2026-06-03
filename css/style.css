@@ -215,20 +215,22 @@ footer{
 }
 
 
-/* ABA SOBRE */
+#loginIcon{
+    display:flex;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 120px;
+    height: 55%;
+}
+#textLogin{
+   position: absolute;
+   padding-left: 170px;
+   margin-top: -22px;
+   font-size: 15px;
+    
 
-#container{
-    display: flex;
-    align-items: start;
-    padding: 105px;
-    gap: 100px;
 }
 
-#foto-sobre{
-    width: 30%;
-    height: auto;
-}
 
 
-/* ABA CONTATO */
 

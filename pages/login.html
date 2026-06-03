@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+
+    <main>
+
+        <div id="container">
+            
+            <div id="login">
+
+                <div id="logo">
+                    <img src="/assets/login/assets/pearlogo-new.png" alt="">
+                </div>
+                
+                <div id="entrar">
+                        <form onsubmit="logarNaPagina(event)">
+                             <h1 id="tituloEntrar">Entrar</h1>
+
+                             <input type="text" name="email" id="email" placeholder="Email" autocomplete="off">
+
+                             <input type="password" name="senha" id="senha" placeholder="Password">
+
+                              <a href="#">Esqueceu sua senha?</a>
+
+                              <button type="submit" id="btn-entrar" class="btn-entrar" onclick="logarNaPagina(event)">Entrar</button>
+                       </form>
+
+                </div>
+                     
+            </div>
+
+
+            <div id="cadastre-se">
+                <h1>Olá, amigo!</h1>
+
+                <p id="paragrafos">
+                    Parabéns! 
+                    <br>
+                    Obrigado por se cadastrar em nosso site, agora realize
+                    <br>
+                    o login para poder entrar e realizar suas compras :) 
+                </p>
+
+                <button type="submit" id="btn-registrar" class="btn-registrar" onclick="registrarConta(event)">Registre-se</button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
