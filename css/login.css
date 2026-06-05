@@ -1,228 +1,189 @@
 @charset "UTF-8";
 
-/* =========================
-   VARIÁVEIS GLOBAIS
-========================= */
+/* Definição das variáveis globais de cores e fontes do projeto */
 :root {
-    --cor-blue: #0172d0;
-    --cor-lightblue: #5EACFF;
-    --cor-black: #1f1f1f;
-    --cor-white: #fafafa;
-    --cor-lightgray: #ACACAC;
-    
-    --fonte-padrao: Arial, Helvetica, sans-serif;
+  --cor-blue: #0172d0;
+  --cor-lightblue: #5eacff;
+  --cor-black: #1f1f1f;
+  --cor-white: #fafafa;
+  --cor-lightgray: #acacac;
+
+  --fonte-padrao: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   RESET CSS
-========================= */
+/* Reset de margens, preenchimentos e bordas padrões */
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-   
-   
-    /* outline: 1px solid red; */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
+/* Configuração da família de fontes global do corpo da página */
 body {
-    font-family: var(--fonte-padrao);
+  font-family: var(--fonte-padrao);
 }
 
-/* =========================
-   CONTAINER PRINCIPAL
-========================= */
+/* Container principal com fundo em degradê e centralização total via Flexbox */
 main {
-    background: linear-gradient(to bottom, #5EACFF 0%, #386799 100%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: linear-gradient(to bottom, #5eacff 0%, #386799 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* =========================
-   CARD DE LOGIN
-========================= */
+/* Dimensões, suavização e estilização da base do card de login */
 #container {
-    width: 50vw;
-    height: 70vh;
-    background-color: white;
-    display: flex;
-    border-radius: 23px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 50vw;
+  height: 70vh;
+  background-color: white;
+  display: flex;
+  border-radius: 23px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+/* Efeito de flutuação e sombra projetada ao passar o mouse no card */
 #container:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-
-
-/* =========================
-   ÁREA DE LOGIN
-========================= */
+/* Definição da área esquerda do card reservada para as inserções de login */
 #login {
-    width: 25vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
-/* =========================
-   LOGO / IMAGENS
-========================= */
+/* Configurações de proporção máxima para as imagens e logo */
 img {
-    
-    width: 100%;
-    max-width: 250px;
-    max-height: 250px;
-  
-
-
-}
-#logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 35%;
-
-  
-}
-#entrar{
-    width: 100%;
-    height: 65%;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
 }
 
-/* =========================
-   TÍTULO DE ENTRADA
-========================= */
+/* Bloco superior reservado para a exibição da logo marca */
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35%;
+}
+
+/* Bloco inferior que encapsula o formulário de entrada */
+#entrar {
+  width: 100%;
+  height: 65%;
+}
+
+/* Estruturação vertical interna dos campos do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Margem de distanciamento abaixo do título de entrada */
 #tituloEntrar {
-    margin-bottom: 30px;
-
+  margin-bottom: 30px;
 }
 
-/* =========================
-   LINKS
-========================= */
+/* Estilização e peso visual padrão para as tags de link */
 a {
-    color: var(--cor-blue);
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--cor-blue);
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* =========================
-   EFEITO HOVER DOS LINKS
-========================= */
+/* Linha decorativa sublinhada ao passar o mouse sobre um link */
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* =========================
-   ÁREA DE CADASTRO
-========================= */
+/* Área direita com formato arredondado estilizado para novos cadastros */
 #cadastre-se {
-    width: 25vw;
-    background-color: var(--cor-blue);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 30%;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 30%;
-    border-bottom-right-radius: 20px;
+  width: 25vw;
+  background-color: var(--cor-blue);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 20px;
 }
 
-/* =========================
-   TEXTO INFORMATIVO
-========================= */
+/* Margens externas aplicadas aos blocos de textos informativos */
 #paragrafos {
-    margin: 30px 10px;
+  margin: 30px 10px;
 }
 
-/* =========================
-   CAMPOS DE ENTRADA
-========================= */
+/* Customização visual base dos campos de digitação textuais */
 input {
-    border: 1px solid var(--cor-black);
-    margin-bottom: 20px;
-    width: 77%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 11px;
-    transition: transform 0.3s ease, box-shawdow 0.3s ease;
-}
-input:hover{
-     transform: translateY(-1px);
-    box-shadow: 0 10px 20px #a0c9eb;
+  border: 1px solid var(--cor-black);
+  margin-bottom: 20px;
+  width: 77%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 11px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/* =========================
-   FOCO DOS INPUTS
-========================= */
-/* input:focus {
-    outline: none;
-    border-color: var(--cor-blue);
-    box-shadow: 0 0 8px rgba(1, 114, 208, .3);
-} */
+/* Efeito de flutuação e brilho neon azulado no hover dos inputs */
+input:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px #a0c9eb;
+}
 
-/* =========================
-   BOTÃO ENTRAR
-========================= */
+/* Customização visual e preenchimento interno do botão de login */
 .btn-entrar {
-    background-color: var(--cor-blue);
-    color: var(--cor-white);
-    font-size: 18px;
-    margin-top: 30px;
-    padding: 8px;
-    width: 40%;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shawdow 0.3s ease;
+  background-color: var(--cor-blue);
+  color: var(--cor-white);
+  font-size: 18px;
+  margin-top: 30px;
+  padding: 8px;
+  width: 40%;
+  border-radius: 15px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/* =========================
-   HOVER BOTÃO ENTRAR
-========================= */
+/* Alteração de cor, elevação e sombra no hover do botão de login */
 .btn-entrar:hover {
-    background-color: #1987e0;
-     transform: translateY(-2px);
-    box-shadow: 0 10px 20px #a0c9eb;
+  background-color: #1987e0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px #a0c9eb;
 }
 
-/* =========================
-   BOTÃO REGISTRAR
-========================= */
+/* Estilização do botão com contorno claro para redirecionamento de registro */
 .btn-registrar {
-    background-color: var(--cor-blue);
-    color: var(--cor-white);
-    border: 1px solid var(--cor-white);
-    border-radius: 15px;
-    font-size: 18px;
-    padding: 8px;
-    width: 40%;
-    cursor: pointer;
+  background-color: var(--cor-blue);
+  color: var(--cor-white);
+  border: 1px solid var(--cor-white);
+  border-radius: 15px;
+  font-size: 18px;
+  padding: 8px;
+  width: 40%;
+  cursor: pointer;
 }
 
-/* =========================
-   HOVER BOTÃO REGISTRAR
-========================= */
+/* Escurecimento sutil do fundo no hover do botão de registro */
 .btn-registrar:hover {
-    background-color: #0f7fdc;
+  background-color: #0f7fdc;
 }

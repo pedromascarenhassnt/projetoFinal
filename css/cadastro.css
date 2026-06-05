@@ -1,21 +1,17 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/* =========================
-   VARIÁVEIS GLOBAIS
-========================= */
+
+/* Definição das variáveis globais de cores e fontes do projeto */
 :root {
   --cor-blue: #0172d0;
   --cor-lightblue: #5eacff;
   --cor-black: #1f1f1f;
   --cor-white: #fafafa;
   --cor-lightgray: #acacac;
-
   --fonte-padrao: Poppins, Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   RESET CSS
-========================= */
+/* Reset geral de margens, preenchimentos e modelo de caixa */
 * {
   margin: 0;
   padding: 0;
@@ -23,16 +19,12 @@
   box-sizing: border-box;
 }
 
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
+/* Configuração da família de fontes global do corpo da página */
 body {
   font-family: var(--fonte-padrao);
 }
 
-/* =========================
-   CONTAINER PRINCIPAL
-========================= */
+/* Container principal com fundo em degradê e centralização total do conteúdo */
 main {
   background: linear-gradient(to bottom, #5eacff 0%, #386799 100%);
   display: flex;
@@ -41,10 +33,7 @@ main {
   min-height: 100vh;
 }
 
-/* =========================
-   CONTAINER QUE ABRIGA
-   BRANDING E FORMULÁRIO
-========================= */
+/* Definição estrutural, dimensões e transições do card principal */
 #container {
   width: 80vw;
   height: 80vh;
@@ -56,14 +45,14 @@ main {
     box-shadow 0.3s ease;
   border-radius: 23px;
 }
+
+/* Efeito de elevação suave e sombra projetada no hover do card */
 #container:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px #14324b;
 }
 
-/* =========================
-   ÁREA DE BRANDING
-========================= */
+/* Configuração de cores, cantos e alinhamento interno da área de branding */
 #branding {
   background-color: var(--cor-blue);
   width: 60vw;
@@ -78,42 +67,40 @@ main {
   align-items: center;
 }
 
+/* Configuração de profundidade, cor e alinhamento do item ativo no menu */
 li.active {
-    color: rgb(255, 255, 255) !important; /* Força o texto do link ativo a ser branco */
-    text-align: center; /* Alinha o texto no centro do elemento */
-    position: relative; /* Mantém como relativo para ancorar o balão azul atrás */
-    padding: 6px 30px; /* Mantém o mesmo espaço para o texto respirar */
-    display: inline-flex; /* Garante alinhamento correto do texto */
-    align-items: center;
-    justify-content: center;
-    z-index: 1; /* Garante que o texto fique ACIMA do balão azul */
+  color: rgb(255, 255, 255) !important;
+  text-align: center;
+  position: relative;
+  padding: 6px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
+/* Efeito de balão de fundo azul posicionado atrás do link ativo */
 li.active::before {
-    content: ""; /* Necessário para criar o elemento fantasma */
-    position: absolute; /* Torna o balão invisível para o cálculo de espaço da barra */
-    top: 0;
-    left: 0;
-    width: 100%; /* Ocupa exatamente a largura da li */
-    height: 100%; /* Ocupa exatamente a altura da li */
-    background-color: #0172d0; /* A cor de fundo azul */
-    border-radius: 50px; /* Deixa as pontas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* A sombra suave abaixo do botão */
-    z-index: -1; /* Joga o balão azul para TRÁS do texto */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0172d0;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: -1;
 }
 
-/* =========================
-   ÁREA DE TEXTO
-========================= */
+/* Delimitação de área e espaçamento para o bloco de texto interno */
 #texto {
   width: 100%;
   height: 45%;
   padding: 35px;
 }
 
-/* =========================
-   ÁREA DA IMAGEM
-========================= */
+/* Container flexível para o posicionamento e centralização da imagem */
 #imagem {
   width: 100%;
   height: 55%;
@@ -122,40 +109,27 @@ li.active::before {
   align-items: center;
 }
 
-/* =========================
-   TÍTULO PRINCIPAL
-========================= */
-
-/* =========================
-   PARÁGRAFOS INFORMATIVOS
-========================= */
+/* Customização de margem, espaçamento e tamanho dos parágrafos textuais */
 .paragrafos {
   margin-top: 30px;
   font-size: 18px;
   line-height: 1.6;
 }
 
-/* =========================
-   SUBTÍTULO DA ÁREA
-   DE BRANDING
-========================= */
+/* Redução da espessura e margem superior do título da área de branding */
 #branding h2 {
   font-weight: lighter;
   margin-top: 40px;
 }
 
-/* =========================
-   IMAGEM PRINCIPAL
-========================= */
+/* Definição de altura fixa e proporções para a imagem Pear */
 #image-pear {
   height: 34vh;
   width: auto;
   display: block;
 }
 
-/* =========================
-   ÁREA DO FORMULÁRIO
-========================= */
+/* Configuração de cores, cantos e alinhamento vertical do bloco do formulário */
 #formulario {
   background-color: var(--cor-white);
   width: 40vw;
@@ -169,9 +143,7 @@ li.active::before {
   border-bottom-right-radius: 23px;
 }
 
-/* =========================
-   CABEÇALHO DO FORMULÁRIO
-========================= */
+/* Alinhamento da base interna para a área de cabeçalho do formulário */
 #text-forms {
   width: 100%;
   height: 25%;
@@ -181,34 +153,26 @@ li.active::before {
   align-items: center;
 }
 
-/* =========================
-   LINKS
-========================= */
+/* Padronização visual de cor e peso para as tags de link */
 a {
   color: var(--cor-blue);
   text-decoration: none;
   font-weight: bold;
 }
 
-/* =========================
-   EFEITO HOVER DOS LINKS
-========================= */
+/* Inclusão de linha decorativa sublinhada no hover dos links */
 a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   TÍTULOS H2 GERAIS
-========================= */
+/* Definição da tipografia alternativa e tamanhos de títulos secundários */
 h2 {
   font-size: 18px;
   font-weight: bold;
   font-family: arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   CONTAINER DOS CAMPOS
-========================= */
+/* Alinhamento horizontal do container que envolve o formulário */
 #forms {
   width: 100%;
   display: flex;
@@ -216,25 +180,19 @@ h2 {
   align-items: flex-start;
 }
 
-/* =========================
-   TÍTULO DO FORMULÁRIO
-========================= */
+/* Customização de espessura e família tipográfica do título do formulário */
 #formulario h1 {
   font-weight: lighter;
   font-family: arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   SUBTÍTULO DO FORMULÁRIO
-========================= */
+/* Ajuste de espessura e margens do subtítulo dentro do formulário */
 #formulario h2 {
   font-weight: lighter;
   margin: 20px 0;
 }
 
-/* =========================
-   FORMULÁRIO
-========================= */
+/* Estruturação interna, preenchimento e cantos do box do formulário azul */
 form {
   background-color: var(--cor-blue);
   display: flex;
@@ -248,9 +206,7 @@ form {
   padding: 50px 30px;
 }
 
-/* =========================
-   CAMPOS DE ENTRADA
-========================= */
+/* Customização visual base dos campos de entrada de texto */
 input {
   margin-bottom: 20px;
   padding: 14px;
@@ -264,24 +220,13 @@ input {
     box-shadow 0.3s ease;
 }
 
-/* =========================
-   FOCO DOS INPUTS
-========================= */
-/* input:focus {
-    outline: none;
-    border-color: var(--cor-blue);
-    box-shadow: 0 0 8px rgba(1, 114, 208, .3);
-     transform: translateY(-10px);
-    box-shadow: 0 10px 20px #14324b; 
-}  */
+/* Efeito de flutuação e sombra escura suave no hover dos inputs */
 input:hover {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px #14324b;
 }
 
-/* =========================
-   BOTÃO DE ENVIO
-========================= */
+/* Customização de margem superior, cantos e tipografia do botão de envio */
 button {
   margin-top: 38px;
   padding: 7px;
@@ -296,9 +241,7 @@ button {
     box-shadow 0.3s ease;
 }
 
-/* =========================
-   EFEITO HOVER DO BOTÃO
-========================= */
+/* Transição de cores, elevação e brilho azul claro no hover do botão */
 button:hover {
   background-color: var(--cor-blue);
   transform: translateY(-1px);
@@ -306,10 +249,7 @@ button:hover {
   color: var(--cor-white);
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
+/* Adaptação de layout e quebra de colunas para telas menores ou dispositivos móveis */
 @media (max-width: 768px) {
   #container {
     flex-direction: column;

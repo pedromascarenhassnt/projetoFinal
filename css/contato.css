@@ -1,0 +1,415 @@
+/* Definição das variáveis globais de cores e fontes do projeto */
+:root {
+  --cor-blue: #0172d0;
+  --cor-lightblue: #5eacff;
+  --cor-black: #1f1f1f;
+  --cor-white: #fafafa;
+  --cor-lightgray: #acacac;
+  --fonte-padrao: Arial, Helvetica, sans-serif;
+}
+
+/* Reset geral de margens, preenchimentos e modelo de caixa */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definição da tipografia e da cor de fundo padrão do site */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--cor-black);
+}
+
+/* Alinhamento e posicionamento estrutural da barra de navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  background-color: var(--cor-white);
+}
+
+/* Estilização do menu em formato de pílula com espaçamento flexível */
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  border: 3px solid #0172d0;
+  border-radius: 50px;
+  padding: 5px 55px;
+  gap: clamp(1rem, 3vw, 4rem);
+  background: transparent;
+}
+
+/* Remoção de sublinhado e padronização da cor dos links */
+.links {
+  text-decoration: none;
+  color: black;
+}
+
+/* Definição da cor do texto identificador da página atual */
+#atual {
+  color: white;
+}
+
+/* Configuração de profundidade e alinhamento do item ativo no menu */
+li.active {
+  color: white !important;
+  text-align: center;
+  position: relative;
+  padding: 6px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Efeito de balão azul posicionado atrás do texto do link ativo */
+li.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0172d0;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Posicionamento absoluto e proporção do logotipo (Pear) */
+#pear {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8%;
+}
+
+/* Ajustes de dimensão, enquadramento e centralização do banner principal */
+img#banner {
+  display: block;
+  width: 80%;
+  max-width: 1400px;
+  height: 400px;
+  object-fit: cover;
+  margin: 40px auto 0 auto;
+}
+
+/* Espaçamento interno e alinhamento do bloco de promoções */
+#promo {
+  text-align: center;
+  padding: 45px;
+}
+
+/* Distribuição horizontal dos elementos na galeria de produtos */
+#galeria {
+  display: flex;
+  gap: clamp(40px, 3vw, 100px);
+  margin-left: 50px;
+}
+
+/* Container de fundo e alinhamento interno da galeria */
+#galeria-bloco {
+  background: #ffffff;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Dimensionamento e transição suave das imagens na galeria */
+.imgsbloco {
+  width: 100%;
+  max-width: 245px;
+  height: auto;
+  transition: 0.3s;
+  margin-right: 50px;
+}
+
+/* Efeito de deslocamento vertical e cursor dinâmico ao passar o mouse */
+.imgsbloco:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+/* Container com efeito de degradê azul para a seção de destaque */
+#texto-aba {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #5eacff, #0172d0);
+  color: white;
+  width: 100%;
+  height: 500px;
+  padding: 50px;
+  margin: 150px auto;
+}
+
+/* Estruturação vertical interna das colunas de texto */
+.textos {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 40%;
+}
+
+/* Caixa com efeito de vidro translúcido para textos destacados */
+#vidro {
+  background: #0173d044;
+  border: 1px solid #0172d0;
+  border-radius: 16px;
+  padding: 10px;
+  color: #ffffff;
+  width: 18%;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Container arredondado em formato de pílula para textos secundários */
+#texto-outraaba {
+  display: inline-flex;
+  background-color: white;
+  border-radius: 50px;
+  justify-content: space-between;
+  padding: 7px;
+  margin-top: 30px;
+}
+
+/* Customização de cor e tamanho do texto escuro interno */
+#p-branco {
+  color: rgb(54, 54, 54);
+  padding: 7px;
+  font-size: 1.1rem;
+}
+
+/* Botão ou marcador interno com cantos arredondados */
+#p-azul {
+  background-color: #1f77d6;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+/* Ajustes de largura proporcional para a imagem do notebook */
+#note {
+  width: 70%;
+  height: auto;
+}
+
+/* Estruturação horizontal e preenchimento da área do rodapé */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #1f77d6;
+  color: white;
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+
+/* Remoção de marcadores e expansão flexível da lista do rodapé */
+.footer-lista {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+}
+
+/* Configuração de cor e espaçamento vertical dos itens do rodapé */
+.footer-lista li {
+  color: white;
+  padding: 10px 0;
+}
+
+/* Definição de proporção e espaçamento lateral das colunas do rodapé */
+.coluna {
+  flex: 1;
+  padding: 0px 20px;
+}
+
+/* Posicionamento do ícone de login na barra de ferramentas */
+#loginIcon {
+  display: flex;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 120px;
+  height: 55%;
+}
+
+/* Posicionamento e tamanho da fonte do texto de login */
+#textLogin {
+  position: absolute;
+  padding-left: 170px;
+  margin-top: -22px;
+  font-size: 15px;
+}
+
+/* Alinhamento e centralização da área de conteúdo principal */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+/* Container estrutural que delimita a área da seção de contato */
+#container-contato {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bloco reservado para títulos e textos introdutórios de contato */
+#textosExternos {
+  width: 100%;
+  max-width: 1200px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Box azul para organizar o agrupamento interno do formulário */
+#msg-contato {
+  background-color: var(--cor-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 500px;
+  height: auto;
+}
+
+/* Container de fundo claro que recebe os elementos do formulário */
+#form-contato {
+  background-color: var(--cor-white);
+  width: 90%;
+  height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bloco lateral para a exibição de informações de telefones e contatos */
+#telefones {
+  width: 40%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+/* Limitação de tamanho máximo das imagens ou ícones de contato */
+.images-contato {
+  width: 100%;
+  max-width: 45px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* Configuração interna e distribuição vertical dos campos do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  margin: 0 20px;
+}
+
+/* Alinhamento à esquerda e tamanho do texto das etiquetas de campos */
+label {
+  align-self: flex-start;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* Dimensionamento, preenchimento e estilo da fonte dos inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Tamanho da fonte dos textos de instrução (placeholder) dos inputs */
+input::placeholder {
+  font-size: 16px;
+}
+
+/* Configurações de tamanho fixo e bloqueio de redimensionamento da área de mensagem */
+#btn-msg {
+  height: 250px;
+  width: 100%;
+  padding: 12px;
+  resize: none;
+}
+
+/* Estilização e peso do texto informativo interno da área de mensagem */
+#btn-msg::placeholder {
+  font-size: 16px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Customização visual, cores e alinhamento do botão de envio */
+button {
+  margin-top: 18px;
+  padding: 10px;
+  width: 35%;
+  background-color: var(--cor-blue);
+  color: var(--cor-white);
+  font-size: 17px;
+  font-weight: bold;
+  align-self: flex-start;
+  border: none;
+}
+
+/* Alteração de cor do botão durante a interação do mouse */
+button:hover {
+  background-color: #1483de;
+}
+
+/* Estilização do título em destaque da seção de contato */
+#titulo {
+  color: var(--cor-blue);
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Definição de tamanho de fonte para títulos de primeiro nível */
+h1 {
+  font-size: 16px;
+}
+
+/* Customização de espaçamento e espessura do subtítulo da página */
+h2#subtitulo {
+  color: var(--cor-lightgray);
+  margin-bottom: 100px;
+  font-weight: lighter;
+  font-size: 22px;
+}
+
+/* Ajustes visuais de cor, peso e margem para os títulos do bloco de telefones */
+#telefones h2 {
+  color: var(--cor-lightgray);
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 100px;
+}

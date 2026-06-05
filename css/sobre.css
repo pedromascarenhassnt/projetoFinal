@@ -1,171 +1,172 @@
-/* Topo (Top), Direita (Right), Baixo (Bottom) e Esquerda (Left) */
-
-*{
-    margin: 0; /* Remove a margem padrão externa de todos os elementos */
-    padding: 0; /* Remove o espaçamento padrão interno de todos os elementos */
-    box-sizing: border-box; /* Garante que a largura e altura incluam bordas e paddings */
+/* Configurações globais e reset de estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif; /* Define a fonte padrão "Poppins" para o site */
+/* Definição da identidade visual e tipografia do corpo do site */
+body {
+  font-family: "Poppins", sans-serif;
 }
 
+/* Estruturação e alinhamento da barra de navegação principal */
 nav {
-    display: flex; /* Ativa o modelo Flexbox para alinhar os elementos filhos */
-    justify-content: center; /* Alinha horizontalmente os itens filhos no centro do nav */
-    align-items: center; /* Alinha verticalmente os itens filhos no centro do nav */
-    padding: 15px; /* Adiciona 15px de espaço interno em cima/baixo e 50px nas laterais */
-    position: relative; /* Define este elemento como a referência para filhos absolutos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
 }
 
-/* nav:active{
-    background-color: rgb(40, 40, 209);
-    color: white;
-    font-weight: bold;
-
-} */
-
+/* Estilização do menu em formato de pílula e espaçamento dos links */
 .nav-list {
-    display: flex; /* Ativa o Flexbox para organizar os links em linha */
-    justify-content: center; /* Alinha os links de forma centralizada dentro da lista */
-    align-items: center; /* Alinha verticalmente os links no centro da barra */
-    list-style-type: none; /* Remove as bolinhas/marcadores padrão da lista HTML */
-    border: 3px solid #0172d0; /* Cria uma borda fina azul ao redor do menu (formato pílula) */
-    border-radius: 50px; /* Arredonda as pontas da borda para criar o design de pílula */
-    padding: 5px 55px; /* Adiciona 5px de espaço interno acima/abaixo e 55px nas laterais */
-    gap: clamp(1rem, 3vw, 4rem); /* Cria espaço dinâmico entre os links usando limites flexíveis */
-    background: transparent; /* Mantém o fundo da lista transparente, sem cor sólida */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  border: 3px solid #0172d0;
+  border-radius: 50px;
+  padding: 5px 55px;
+  gap: clamp(1rem, 3vw, 4rem);
+  background: transparent;
 }
 
-/* 1. Ajuste na LI ativa: ela vira apenas a referência */
+/* Configuração do item de menu ativo (referência para o balão) */
 li.active {
-    color: rgb(255, 255, 255) !important; /* Força o texto do link ativo a ser branco */
-    text-align: center; /* Alinha o texto no centro do elemento */
-    position: relative; /* Mantém como relativo para ancorar o balão azul atrás */
-    padding: 6px 30px; /* Mantém o mesmo espaço para o texto respirar */
-    display: inline-flex; /* Garante alinhamento correto do texto */
-    align-items: center;
-    justify-content: center;
-    z-index: 1; /* Garante que o texto fique ACIMA do balão azul */
+  color: rgb(255, 255, 255) !important;
+  text-align: center;
+  position: relative;
+  padding: 6px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
-
+/* Criação do efeito de balão azul por trás do link ativo */
 li.active::before {
-    content: ""; /* Necessário para criar o elemento fantasma */
-    position: absolute; /* Torna o balão invisível para o cálculo de espaço da barra */
-    top: 0;
-    left: 0;
-    width: 100%; /* Ocupa exatamente a largura da li */
-    height: 100%; /* Ocupa exatamente a altura da li */
-    background-color: #0172d0; /* A cor de fundo azul */
-    border-radius: 50px; /* Deixa as pontas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* A sombra suave abaixo do botão */
-    z-index: -1; /* Joga o balão azul para TRÁS do texto */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0172d0;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: -1;
 }
 
-
-
+/* Posicionamento fixo e dimensões do ícone do carrinho de compras */
 .carrinho {
-    width: 25px; /* Define a largura fixa que você queria, substituindo o clamp e o size */
-    height: auto; /* Ajusta a altura proporcionalmente para não distorcer a imagem */
-    cursor: pointer; /* Transforma o cursor do mouse na "mãozinha" de clique */
-    position: absolute; /* Remove o carrinho do fluxo normal, permitindo posicionamento livre */
-    right: 171px; /* Alinha o carrinho a 159px da borda direita */
-}
-#atual{
-    color: rgb(255, 255, 255); /* Altera a cor do elemento com id "atual" para branco */
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  right: 171px;
 }
 
-.links{
-    text-decoration: none; /* Remove o sublinhado padrão que os links têm em HTML */
-    color: black; /* Define a cor do texto do link como preta */
+/* Estilo para destacar o elemento da página atual */
+#atual {
+  color: rgb(255, 255, 255);
 }
 
+/* Reset visual padrão de todos os links do documento */
+.links {
+  text-decoration: none;
+  color: black;
+}
+
+/* Posicionamento fixo e proporções do logotipo (Pear) */
 #pear {
-    position: absolute; /* Remove a logo do fluxo, fazendo-a "flutuar" na tela */
-    left: 50px; /* Alinha a lateral esquerda da logo a 50px da borda do nav */
-    top: 50%; /* Joga a logo para a metade vertical do elemento pai */
-    transform: translateY(-50%); /* Ajusta o eixo próprio da logo para um alinhamento vertical perfeito */
-    width: 8%; /* Define a largura da logo como 8% do tamanho da tela */
-}
-footer{
-    display: flex; /* Ativa o Flexbox no rodapé para alinhar as colunas lado a lado */
-    justify-content: space-between; /* CORRIGIDO: Corrigido o erro de digitação de space-beetween para space-between */
-    align-items: flex-start; /* Alinha as colunas no topo do rodapé, deixando o crescimento livre para baixo */
-    background-color: #1f77d6; /* Aplica uma cor de fundo azul no rodapé inteiro */
-    color: white; /* Define a cor padrão das letras do rodapé como branca */
-    width: 100%; /* Faz o rodapé cobrir toda a largura da janela */
-    height: auto; /* Deixa a altura do rodapé livre para se adaptar ao tamanho do conteúdo */
-    padding: 50px; /* Adiciona 50px de preenchimento interno em todo o rodapé */
-}
-footer-lista {
-    list-style: none; /* Remove marcadores/bolinhas das listas do rodapé */
-    padding: 0; /* Remove preenchimentos extras padrões da lista */
-    flex: 1; /* Faz a lista crescer e ocupar fatias iguais com as outras colunas */
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8%;
 }
 
+/* Estruturação, cores e espaçamento da área do rodapé */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #1f77d6;
+  color: white;
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+
+/* Seletor corrigido para classe: Remove marcadores e distribui as listas do rodapé */
 .footer-lista {
-    list-style: none; /* Remove marcadores/bolinhas das listas do rodapé */
-    padding: 0; /* Remove preenchimentos extras padrões da lista */
-    flex: 1; /* Faz a lista crescer e ocupar fatias iguais com as outras colunas */
+  list-style: none;
+  padding: 0;
+  flex: 1;
 }
 
+/* Espaçamento vertical entre os itens de link do rodapé */
 .footer-lista li {
-    padding: 10px 0; /* Adiciona 10px de espaço vertical entre um item do rodapé e outro */
+  padding: 10px 0;
 }
 
+/* Estilo padrão e transição de cor para os links do rodapé */
 .footer-lista li a {
-    text-decoration: none; /* Remove o sublinhado clássico de link */
-    color: #ffffff;        /* Altera a cor do texto para branco (mude se preferir outra cor) */
-    transition: color 0.3s ease; /* Deixa a mudança de cor suave ao passar o mouse */
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
+/* Alteração de cor suave ao passar o mouse sobre os links do rodapé */
 .footer-lista li a:hover {
-    color: #cccccc;        /* Muda para um cinza claro ao passar o mouse */
+  color: #cccccc;
 }
 
-
-.coluna{
-    flex: 1; /* Faz com que cada coluna do rodapé tenha exatamente a mesma largura distribuída */
-    padding: 0px 20px; /* Adiciona 20px de espaçamento interno apenas nas laterais das colunas */
+/* Configuração de largura uniforme e respiro lateral para as colunas do rodapé */
+.coluna {
+  flex: 1;
+  padding: 0px 20px;
 }
 
-/* ABA SOBRE */
-
-#container{
-    display: flex;
-    align-items: start;
-    padding: 105px;
-    gap: 100px;
+/* Container principal da aba Sobre para alinhar imagem e texto lado a lado */
+#container {
+  display: flex;
+  align-items: start;
+  padding: 105px;
+  gap: 100px;
 }
 
-#foto-sobre{
-    width: 45%;
-    height: auto;
-    border-radius: 35px;
-    box-shadow: 0 5px 10px #14324b;   
+/* Estilização padrão, bordas e sombra da foto da seção Sobre */
+#foto-sobre {
+  width: 45%;
+  height: auto;
+  border-radius: 35px;
+  box-shadow: 0 5px 10px #14324b;
 }
 
-#foto-sobre:hover{
-     transform: translateY(-4px);
-     box-shadow: 0 5px 10px #003968;    
-    width: 45%;
-    height: auto;
-    border-radius: 35px;
+/* Efeito de leve flutuação e ajuste de sombra ao passar o mouse sobre a foto */
+#foto-sobre:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 10px #003968;
+  width: 45%;
+  height: auto;
+  border-radius: 35px;
 }
 
-#loginIcon{
-    display:flex;
-    position: absolute;
-    margin-top: -20px;
-    margin-left: 120px;
-    height: 55%;
+/* Posicionamento do ícone de login na barra de navegação */
+#loginIcon {
+  display: flex;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 120px;
+  height: 55%;
 }
-#textLogin{
-   position: absolute;
-   padding-left: 170px;
-   margin-top: -22px;
-   font-size: 15px;
-    
 
+/* Alinhamento, distanciamento e tamanho do texto descritivo de login */
+#textLogin {
+  position: absolute;
+  padding-left: 170px;
+  margin-top: -22px;
+  font-size: 15px;
 }
