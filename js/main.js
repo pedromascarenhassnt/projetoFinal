@@ -11,11 +11,10 @@ function cadastroNaPagina(event){
         localStorage.setItem('emailUsuario', emailUsuario);
         localStorage.setItem('senhaUsuario', senhaUsuario);
 
+        alert("Seu cadastro foi realizado");
+
         document.location.href = "login.html"  
-
-        
 }
-
 function logarNaPagina(event) {
  
     event.preventDefault()
@@ -35,4 +34,6 @@ function logarNaPagina(event) {
  function registrarConta(event) {
      document.location.href = "cadastro.html"
  }
+
+ 
 
